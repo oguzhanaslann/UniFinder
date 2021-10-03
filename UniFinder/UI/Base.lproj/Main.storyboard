@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bEV-rt-ttK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="bMp-AQ-cum">
+            <objects>
+                <viewController id="6Xr-bV-bvH" customClass="SearchViewController" customModule="UniFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AAU-3O-geS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fg5-Io-tkl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="bOh-Wb-UKi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jP8-JL-4aJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="195"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="4Pa-wd-qTq">
+            <objects>
+                <viewController id="eeR-VO-E7r" customClass="UniversityListViewController" customModule="UniFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dE3-dz-rhk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mm9-qe-3UJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uki-99-Ozo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uki-99-Ozo" firstAttribute="trailing" secondItem="mm9-qe-3UJ" secondAttribute="trailing" id="4tS-ax-eMq"/>
+                            <constraint firstItem="uki-99-Ozo" firstAttribute="bottom" secondItem="mm9-qe-3UJ" secondAttribute="bottom" id="B7D-oB-gL3"/>
+                            <constraint firstItem="mm9-qe-3UJ" firstAttribute="top" secondItem="uki-99-Ozo" secondAttribute="top" id="WnM-NH-m4H"/>
+                            <constraint firstItem="mm9-qe-3UJ" firstAttribute="leading" secondItem="uki-99-Ozo" secondAttribute="leading" id="w8n-yX-PbR"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list.dash" catalog="system" id="vWc-04-Tz3"/>
+                    <connections>
+                        <outlet property="universityListTableView" destination="mm9-qe-3UJ" id="W7y-Hq-Q6v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsH-cF-jQW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="-510"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uPy-Ch-Hbk">
+            <objects>
+                <tabBarController id="bEV-rt-ttK" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5BG-lB-sd3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eeR-VO-E7r" kind="relationship" relationship="viewControllers" id="bEf-Zk-eqa"/>
+                        <segue destination="6Xr-bV-bvH" kind="relationship" relationship="viewControllers" id="a1g-U9-KYl"/>
+                        <segue destination="kWS-2b-CpO" kind="relationship" relationship="viewControllers" id="W0U-qf-fUy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1p-aI-uNK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-268" y="84"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="HWM-kH-ReT">
+            <objects>
+                <viewController id="kWS-2b-CpO" customClass="ProfileViewController" customModule="UniFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sxZ-kR-BHb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="DTG-h8-POu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person.fill" id="TJj-zT-pdC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSR-i9-BvC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="920"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

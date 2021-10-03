@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */; };
+		D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0F26F7CAB400B1339E /* SearchViewController.swift */; };
+		D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */; };
 		D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045BD26F68ED00098BEAF /* AppDelegate.swift */; };
 		D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045BF26F68ED00098BEAF /* SceneDelegate.swift */; };
 		D44045C226F68ED00098BEAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045C126F68ED00098BEAF /* ViewController.swift */; };
@@ -15,6 +18,36 @@
 		D44045CA26F68ED10098BEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */; };
 		D44045D526F68ED10098BEAF /* UniFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045D426F68ED10098BEAF /* UniFinderTests.swift */; };
 		D44045E026F68ED10098BEAF /* UniFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045DF26F68ED10098BEAF /* UniFinderUITests.swift */; };
+		D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
+		D47429B826F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
+		D47429B926F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
+		D47429BA26F7264000B51184 /* AvenirNext-DemiBold-03.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */; };
+		D47429BB26F7264000B51184 /* AvenirNext-DemiBold-03.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */; };
+		D47429BC26F7264000B51184 /* AvenirNext-DemiBold-03.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */; };
+		D47429BD26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */; };
+		D47429BE26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */; };
+		D47429BF26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */; };
+		D47429C026F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B326F7264000B51184 /* AvenirNext-Bold-01.ttf */; };
+		D47429C126F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B326F7264000B51184 /* AvenirNext-Bold-01.ttf */; };
+		D47429C226F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B326F7264000B51184 /* AvenirNext-Bold-01.ttf */; };
+		D47429C326F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B426F7264000B51184 /* AvenirNext-Italic-05.ttf */; };
+		D47429C426F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B426F7264000B51184 /* AvenirNext-Italic-05.ttf */; };
+		D47429C526F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B426F7264000B51184 /* AvenirNext-Italic-05.ttf */; };
+		D47429C626F7264000B51184 /* AvenirNext-Medium-06.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B526F7264000B51184 /* AvenirNext-Medium-06.ttf */; };
+		D47429C726F7264000B51184 /* AvenirNext-Medium-06.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B526F7264000B51184 /* AvenirNext-Medium-06.ttf */; };
+		D47429C826F7264000B51184 /* AvenirNext-Medium-06.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B526F7264000B51184 /* AvenirNext-Medium-06.ttf */; };
+		D47429C926F7264000B51184 /* AvenirNext-UltraLight-11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B626F7264000B51184 /* AvenirNext-UltraLight-11.ttf */; };
+		D47429CA26F7264000B51184 /* AvenirNext-UltraLight-11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B626F7264000B51184 /* AvenirNext-UltraLight-11.ttf */; };
+		D47429CB26F7264000B51184 /* AvenirNext-UltraLight-11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B626F7264000B51184 /* AvenirNext-UltraLight-11.ttf */; };
+		D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47429CC26F72B9E00B51184 /* LaunchScreenViewController.swift */; };
+		D4762B1427099EAB00B2CB58 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D4762B1327099EAB00B2CB58 /* Kingfisher */; };
+		D4762B182709B3B700B2CB58 /* UniversityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762B172709B3B700B2CB58 /* UniversityListViewModel.swift */; };
+		D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762B192709B45800B2CB58 /* ViewModel.swift */; };
+		D4762B1C2709B54300B2CB58 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4762B1B2709B54300B2CB58 /* Observable.swift */; };
+		D4CF783126FD1427002FA4C9 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF782F26FD1427002FA4C9 /* TableViewCell.swift */; };
+		D4CF783226FD1427002FA4C9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CF783026FD1427002FA4C9 /* TableViewCell.xib */; };
+		D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF783526FD192D002FA4C9 /* Constants.swift */; };
+		D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
+		D4278D0F26F7CAB400B1339E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		D44045BA26F68ED00098BEAF /* UniFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44045BD26F68ED00098BEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D44045BF26F68ED00098BEAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +85,21 @@
 		D44045DB26F68ED10098BEAF /* UniFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44045DF26F68ED10098BEAF /* UniFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniFinderUITests.swift; sourceTree = "<group>"; };
 		D44045E126F68ED10098BEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Heavy-09.ttf"; sourceTree = "<group>"; };
+		D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-DemiBold-03.ttf"; sourceTree = "<group>"; };
+		D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Regular-08.ttf"; sourceTree = "<group>"; };
+		D47429B326F7264000B51184 /* AvenirNext-Bold-01.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Bold-01.ttf"; sourceTree = "<group>"; };
+		D47429B426F7264000B51184 /* AvenirNext-Italic-05.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Italic-05.ttf"; sourceTree = "<group>"; };
+		D47429B526F7264000B51184 /* AvenirNext-Medium-06.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Medium-06.ttf"; sourceTree = "<group>"; };
+		D47429B626F7264000B51184 /* AvenirNext-UltraLight-11.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-UltraLight-11.ttf"; sourceTree = "<group>"; };
+		D47429CC26F72B9E00B51184 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		D4762B172709B3B700B2CB58 /* UniversityListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewModel.swift; sourceTree = "<group>"; };
+		D4762B192709B45800B2CB58 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		D4762B1B2709B54300B2CB58 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		D4CF782F26FD1427002FA4C9 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D4CF783026FD1427002FA4C9 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		D4CF783526FD192D002FA4C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4762B1427099EAB00B2CB58 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +128,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4278D0B26F7C9D700B1339E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF782E26FD1400002FA4C9 /* profile */,
+				D4CF782D26FD13F9002FA4C9 /* search */,
+				D4CF782C26FD13E0002FA4C9 /* list */,
+				D47429CC26F72B9E00B51184 /* LaunchScreenViewController.swift */,
+				D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */,
+				D44045C126F68ED00098BEAF /* ViewController.swift */,
+				D44045C326F68ED00098BEAF /* Main.storyboard */,
+				D4278D0F26F7CAB400B1339E /* SearchViewController.swift */,
+				D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		D44045B126F68ED00098BEAF = {
 			isa = PBXGroup;
 			children = (
@@ -99,12 +167,14 @@
 		D44045BC26F68ED00098BEAF /* UniFinder */ = {
 			isa = PBXGroup;
 			children = (
+				D4762B162709B38500B2CB58 /* data source */,
+				D4CF783726FD1CB7002FA4C9 /* Domain Model */,
+				D4CF783426FD1913002FA4C9 /* Util */,
+				D4278D0B26F7C9D700B1339E /* UI */,
+				D47429AF26F7262A00B51184 /* fonts */,
 				D44045BD26F68ED00098BEAF /* AppDelegate.swift */,
 				D44045BF26F68ED00098BEAF /* SceneDelegate.swift */,
-				D44045C126F68ED00098BEAF /* ViewController.swift */,
-				D44045C326F68ED00098BEAF /* Main.storyboard */,
 				D44045C626F68ED10098BEAF /* Assets.xcassets */,
-				D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */,
 				D44045CB26F68ED10098BEAF /* Info.plist */,
 			);
 			path = UniFinder;
@@ -128,6 +198,70 @@
 			path = UniFinderUITests;
 			sourceTree = "<group>";
 		};
+		D47429AF26F7262A00B51184 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D47429B326F7264000B51184 /* AvenirNext-Bold-01.ttf */,
+				D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */,
+				D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */,
+				D47429B426F7264000B51184 /* AvenirNext-Italic-05.ttf */,
+				D47429B526F7264000B51184 /* AvenirNext-Medium-06.ttf */,
+				D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */,
+				D47429B626F7264000B51184 /* AvenirNext-UltraLight-11.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		D4762B162709B38500B2CB58 /* data source */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "data source";
+			sourceTree = "<group>";
+		};
+		D4CF782C26FD13E0002FA4C9 /* list */ = {
+			isa = PBXGroup;
+			children = (
+				D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */,
+				D4CF782F26FD1427002FA4C9 /* TableViewCell.swift */,
+				D4CF783026FD1427002FA4C9 /* TableViewCell.xib */,
+				D4762B172709B3B700B2CB58 /* UniversityListViewModel.swift */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		D4CF782D26FD13F9002FA4C9 /* search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = search;
+			sourceTree = "<group>";
+		};
+		D4CF782E26FD1400002FA4C9 /* profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		D4CF783426FD1913002FA4C9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF783526FD192D002FA4C9 /* Constants.swift */,
+				D4762B192709B45800B2CB58 /* ViewModel.swift */,
+				D4762B1B2709B54300B2CB58 /* Observable.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		D4CF783726FD1CB7002FA4C9 /* Domain Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */,
+			);
+			path = "Domain Model";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,6 +278,9 @@
 			dependencies = (
 			);
 			name = UniFinder;
+			packageProductDependencies = (
+				D4762B1327099EAB00B2CB58 /* Kingfisher */,
+			);
 			productName = UniFinder;
 			productReference = D44045BA26F68ED00098BEAF /* UniFinder.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +352,9 @@
 				Base,
 			);
 			mainGroup = D44045B126F68ED00098BEAF;
+			packageReferences = (
+				D4762B1227099EAB00B2CB58 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = D44045BB26F68ED00098BEAF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,9 +371,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47429C626F7264000B51184 /* AvenirNext-Medium-06.ttf in Resources */,
+				D4CF783226FD1427002FA4C9 /* TableViewCell.xib in Resources */,
+				D47429BA26F7264000B51184 /* AvenirNext-DemiBold-03.ttf in Resources */,
+				D47429C926F7264000B51184 /* AvenirNext-UltraLight-11.ttf in Resources */,
 				D44045CA26F68ED10098BEAF /* LaunchScreen.storyboard in Resources */,
 				D44045C726F68ED10098BEAF /* Assets.xcassets in Resources */,
 				D44045C526F68ED00098BEAF /* Main.storyboard in Resources */,
+				D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */,
+				D47429C326F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */,
+				D47429BD26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */,
+				D47429C026F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +389,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47429B826F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */,
+				D47429CA26F7264000B51184 /* AvenirNext-UltraLight-11.ttf in Resources */,
+				D47429BB26F7264000B51184 /* AvenirNext-DemiBold-03.ttf in Resources */,
+				D47429C126F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */,
+				D47429C726F7264000B51184 /* AvenirNext-Medium-06.ttf in Resources */,
+				D47429BE26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */,
+				D47429C426F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +403,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47429B926F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */,
+				D47429CB26F7264000B51184 /* AvenirNext-UltraLight-11.ttf in Resources */,
+				D47429BC26F7264000B51184 /* AvenirNext-DemiBold-03.ttf in Resources */,
+				D47429C226F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */,
+				D47429C826F7264000B51184 /* AvenirNext-Medium-06.ttf in Resources */,
+				D47429BF26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */,
+				D47429C526F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +420,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4762B1C2709B54300B2CB58 /* Observable.swift in Sources */,
+				D4762B182709B3B700B2CB58 /* UniversityListViewModel.swift in Sources */,
+				D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */,
+				D4CF783126FD1427002FA4C9 /* TableViewCell.swift in Sources */,
+				D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */,
 				D44045C226F68ED00098BEAF /* ViewController.swift in Sources */,
 				D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */,
+				D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */,
+				D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */,
+				D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */,
+				D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */,
+				D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */,
 				D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -587,6 +759,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D4762B1227099EAB00B2CB58 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D4762B1327099EAB00B2CB58 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D4762B1227099EAB00B2CB58 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D44045B226F68ED00098BEAF /* Project object */;
 }

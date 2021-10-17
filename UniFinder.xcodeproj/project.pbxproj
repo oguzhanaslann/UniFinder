@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D427414A271B50F100AAE3CE /* UIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4274149271B50F100AAE3CE /* UIViews.swift */; };
+		D427414C271B566C00AAE3CE /* UniversityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427414B271B566C00AAE3CE /* UniversityDetailViewModel.swift */; };
+		D427414E271B56B500AAE3CE /* UniversityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427414D271B56B500AAE3CE /* UniversityDetail.swift */; };
+		D4274151271B66FC00AAE3CE /* PromotionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427414F271B66FC00AAE3CE /* PromotionCollectionViewCell.swift */; };
+		D4274152271B66FC00AAE3CE /* PromotionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4274150271B66FC00AAE3CE /* PromotionCollectionViewCell.xib */; };
 		D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */; };
 		D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0F26F7CAB400B1339E /* SearchViewController.swift */; };
 		D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */; };
@@ -18,6 +23,7 @@
 		D44045CA26F68ED10098BEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */; };
 		D44045D526F68ED10098BEAF /* UniFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045D426F68ED10098BEAF /* UniFinderTests.swift */; };
 		D44045E026F68ED10098BEAF /* UniFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045DF26F68ED10098BEAF /* UniFinderUITests.swift */; };
+		D46BE9AD2710226100633C69 /* UniversityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */; };
 		D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
 		D47429B826F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
 		D47429B926F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
@@ -68,6 +74,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4274149271B50F100AAE3CE /* UIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViews.swift; sourceTree = "<group>"; };
+		D427414B271B566C00AAE3CE /* UniversityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewModel.swift; sourceTree = "<group>"; };
+		D427414D271B56B500AAE3CE /* UniversityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetail.swift; sourceTree = "<group>"; };
+		D427414F271B66FC00AAE3CE /* PromotionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotionCollectionViewCell.swift; sourceTree = "<group>"; };
+		D4274150271B66FC00AAE3CE /* PromotionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromotionCollectionViewCell.xib; sourceTree = "<group>"; };
 		D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
 		D4278D0F26F7CAB400B1339E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +96,7 @@
 		D44045DB26F68ED10098BEAF /* UniFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44045DF26F68ED10098BEAF /* UniFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniFinderUITests.swift; sourceTree = "<group>"; };
 		D44045E126F68ED10098BEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewController.swift; sourceTree = "<group>"; };
 		D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Heavy-09.ttf"; sourceTree = "<group>"; };
 		D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-DemiBold-03.ttf"; sourceTree = "<group>"; };
 		D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Regular-08.ttf"; sourceTree = "<group>"; };
@@ -131,6 +143,7 @@
 		D4278D0B26F7C9D700B1339E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				D46BE9AB2710222700633C69 /* universityDetail */,
 				D4CF782E26FD1400002FA4C9 /* profile */,
 				D4CF782D26FD13F9002FA4C9 /* search */,
 				D4CF782C26FD13E0002FA4C9 /* list */,
@@ -198,6 +211,17 @@
 			path = UniFinderUITests;
 			sourceTree = "<group>";
 		};
+		D46BE9AB2710222700633C69 /* universityDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */,
+				D427414B271B566C00AAE3CE /* UniversityDetailViewModel.swift */,
+				D427414F271B66FC00AAE3CE /* PromotionCollectionViewCell.swift */,
+				D4274150271B66FC00AAE3CE /* PromotionCollectionViewCell.xib */,
+			);
+			path = universityDetail;
+			sourceTree = "<group>";
+		};
 		D47429AF26F7262A00B51184 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +274,7 @@
 				D4CF783526FD192D002FA4C9 /* Constants.swift */,
 				D4762B192709B45800B2CB58 /* ViewModel.swift */,
 				D4762B1B2709B54300B2CB58 /* Observable.swift */,
+				D4274149271B50F100AAE3CE /* UIViews.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -258,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */,
+				D427414D271B56B500AAE3CE /* UniversityDetail.swift */,
 			);
 			path = "Domain Model";
 			sourceTree = "<group>";
@@ -381,6 +407,7 @@
 				D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */,
 				D47429C326F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */,
 				D47429BD26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */,
+				D4274152271B66FC00AAE3CE /* PromotionCollectionViewCell.xib in Resources */,
 				D47429C026F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D427414E271B56B500AAE3CE /* UniversityDetail.swift in Sources */,
 				D4762B1C2709B54300B2CB58 /* Observable.swift in Sources */,
 				D4762B182709B3B700B2CB58 /* UniversityListViewModel.swift in Sources */,
 				D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */,
@@ -427,11 +455,15 @@
 				D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */,
 				D44045C226F68ED00098BEAF /* ViewController.swift in Sources */,
 				D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */,
+				D46BE9AD2710226100633C69 /* UniversityDetailViewController.swift in Sources */,
+				D427414A271B50F100AAE3CE /* UIViews.swift in Sources */,
 				D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */,
 				D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */,
+				D427414C271B566C00AAE3CE /* UniversityDetailViewModel.swift in Sources */,
 				D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */,
 				D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */,
 				D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */,
+				D4274151271B66FC00AAE3CE /* PromotionCollectionViewCell.swift in Sources */,
 				D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

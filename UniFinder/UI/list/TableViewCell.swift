@@ -12,13 +12,18 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var universityImage: UIImageView!
     @IBOutlet weak var universityName: UILabel!
     @IBOutlet weak var universityCityName: UILabel!
-
     
+    
+    private var position : Int? = nil
     private var clickListener : onDidTapItemListener? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        universityImage?.layer.masksToBounds = true
+        universityImage?.layer.cornerRadius = 16
+        universityImage?.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,7 +31,7 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
         if(selected){
-            clickListener?.didtapItem()
+            clickListener?.didtapItem(position: position)
         }
     }
     
@@ -36,9 +41,19 @@ class TableViewCell: UITableViewCell {
         self.clickListener = onclickListener
     }
     
+    func setItemPosition(position:Int){
+        self.position = position
+    }
+    
+    func initWith(universityName:String,universityCityName:String,imageUrl : URL,position:Int){
+        self.universityName.text = universityName
+        self.universityCityName.text = universityCityName
+        universityImage?.kf.setImage(with: imageUrl)
+        setItemPosition(position: position)
+    }
     
 }
 
 protocol onDidTapItemListener  : AnyObject{
-    func didtapItem()
+    func didtapItem(position:Int?)
 }

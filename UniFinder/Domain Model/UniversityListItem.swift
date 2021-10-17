@@ -9,6 +9,7 @@ import Foundation
 
 
 struct UniversityListItem {
+    let id : String
     let imageUrl : String
     let name : String
     let city : String 

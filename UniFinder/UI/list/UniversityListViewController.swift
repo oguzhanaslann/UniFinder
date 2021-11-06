@@ -18,19 +18,11 @@ class UniversityListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.fetchData()
-        
-        
+        viewModel.fetchInitialPage()
         setUpObservers()
-        
-        /*
-          todo
-            add navcontroller to each tab
-            add return back mechanism to detail page
-         */
-        
-        let unib = UINib(nibName: "TableViewCell", bundle: nil)
-        universityListTableView.register(unib, forCellReuseIdentifier: "TableViewCell")
+    
+        let unib = UINib(nibName: TableViewCell.indentifier, bundle: nil)
+        universityListTableView.register(unib, forCellReuseIdentifier: TableViewCell.indentifier)
         universityListTableView.delegate = self
         universityListTableView.dataSource = self
         universityListTableView.rowHeight = UITableView.automaticDimension
@@ -41,8 +33,20 @@ class UniversityListViewController: UIViewController {
     
     func setUpObservers() {
         viewModel.universityList.observe(on: self) { universityList in
-            print(universityList)
+//            switch universityList {
+//                case .Error(_):
+//                    print("err")
+//                case .Loading:
+//                    print("")
+//                case .Success(let unilist ):
+//                    break
+//
+//
+//            }
+            print("took")
             self.source = universityList
+            
+            self.universityListTableView.reloadData()
         }
     }
     
@@ -73,7 +77,6 @@ extension UniversityListViewController : UITableViewDelegate,UITableViewDataSour
             position: indexPath.row
         )
         
-        print( "\(source[indexPath.row])" )
         
         return cell!
     }
@@ -102,5 +105,15 @@ extension UniversityListViewController : onDidTapItemListener {
         
         present(viewController, animated: true , completion: nil)
         
+    }
+    
+}
+
+extension UniversityListViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (universityListTableView.contentSize.height - 100 - scrollView.frame.size.height) {
+            viewModel.fetchNextPage()
+        }
     }
 }

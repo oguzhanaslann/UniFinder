@@ -14,6 +14,8 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var universityCityName: UILabel!
     
     
+    public static let  indentifier = "TableViewCell"
+    
     private var position : Int? = nil
     private var clickListener : onDidTapItemListener? = nil
     

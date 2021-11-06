@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		D40FECB7271C2971005BE36B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D40FECB6271C2971005BE36B /* SwiftyJSON */; };
 		D40FECBA271C2A7D005BE36B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D40FECB9271C2A7D005BE36B /* Alamofire */; };
+		D40FECBC271C3353005BE36B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40FECBB271C3353005BE36B /* APIService.swift */; };
+		D40FECBF271C341D005BE36B /* UniversityNetworkSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40FECBE271C341D005BE36B /* UniversityNetworkSource.swift */; };
+		D40FECC4271C353F005BE36B /* UniversityListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40FECC3271C353F005BE36B /* UniversityListDTO.swift */; };
+		D40FECC6271C38AC005BE36B /* APIUrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40FECC5271C38AC005BE36B /* APIUrlManager.swift */; };
+		D424D2A927350D1300F9E27B /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D424D2A827350D1300F9E27B /* DataState.swift */; };
 		D427414A271B50F100AAE3CE /* UIViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4274149271B50F100AAE3CE /* UIViews.swift */; };
 		D427414C271B566C00AAE3CE /* UniversityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427414B271B566C00AAE3CE /* UniversityDetailViewModel.swift */; };
 		D427414E271B56B500AAE3CE /* UniversityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D427414D271B56B500AAE3CE /* UniversityDetail.swift */; };
@@ -56,6 +61,8 @@
 		D4CF783226FD1427002FA4C9 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4CF783026FD1427002FA4C9 /* TableViewCell.xib */; };
 		D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF783526FD192D002FA4C9 /* Constants.swift */; };
 		D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */; };
+		D4DA10D4272BEF0C00026B7C /* NetworkSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DA10D3272BEF0C00026B7C /* NetworkSource.swift */; };
+		D4DA10D8272BF7CD00026B7C /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DA10D7272BF7CD00026B7C /* models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +83,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D40FECBB271C3353005BE36B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D40FECBE271C341D005BE36B /* UniversityNetworkSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityNetworkSource.swift; sourceTree = "<group>"; };
+		D40FECC3271C353F005BE36B /* UniversityListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListDTO.swift; sourceTree = "<group>"; };
+		D40FECC5271C38AC005BE36B /* APIUrlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrlManager.swift; sourceTree = "<group>"; };
+		D424D2A827350D1300F9E27B /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
 		D4274149271B50F100AAE3CE /* UIViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViews.swift; sourceTree = "<group>"; };
 		D427414B271B566C00AAE3CE /* UniversityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewModel.swift; sourceTree = "<group>"; };
 		D427414D271B56B500AAE3CE /* UniversityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetail.swift; sourceTree = "<group>"; };
@@ -114,6 +126,8 @@
 		D4CF783026FD1427002FA4C9 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		D4CF783526FD192D002FA4C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListItem.swift; sourceTree = "<group>"; };
+		D4DA10D3272BEF0C00026B7C /* NetworkSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSource.swift; sourceTree = "<group>"; };
+		D4DA10D7272BF7CD00026B7C /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +158,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D403C0FF27367A2300DFC5E6 /* repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repositories;
+			sourceTree = "<group>";
+		};
+		D403C10027367A3500DFC5E6 /* usecases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = usecases;
+			sourceTree = "<group>";
+		};
+		D40FECBD271C335B005BE36B /* network */ = {
+			isa = PBXGroup;
+			children = (
+				D4DA10D6272BF7BF00026B7C /* model */,
+				D4DA10D3272BEF0C00026B7C /* NetworkSource.swift */,
+				D40FECC0271C34A8005BE36B /* dto */,
+				D40FECBB271C3353005BE36B /* APIService.swift */,
+				D40FECBE271C341D005BE36B /* UniversityNetworkSource.swift */,
+				D40FECC5271C38AC005BE36B /* APIUrlManager.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		D40FECC0271C34A8005BE36B /* dto */ = {
+			isa = PBXGroup;
+			children = (
+				D40FECC3271C353F005BE36B /* UniversityListDTO.swift */,
+			);
+			path = dto;
+			sourceTree = "<group>";
+		};
+		D424D2A727350D0000F9E27B /* local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
 		D4278D0B26F7C9D700B1339E /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +299,8 @@
 		D4762B162709B38500B2CB58 /* data source */ = {
 			isa = PBXGroup;
 			children = (
+				D424D2A727350D0000F9E27B /* local */,
+				D40FECBD271C335B005BE36B /* network */,
 			);
 			path = "data source";
 			sourceTree = "<group>";
@@ -286,10 +344,21 @@
 		D4CF783726FD1CB7002FA4C9 /* Domain Model */ = {
 			isa = PBXGroup;
 			children = (
+				D403C10027367A3500DFC5E6 /* usecases */,
+				D403C0FF27367A2300DFC5E6 /* repositories */,
 				D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */,
 				D427414D271B56B500AAE3CE /* UniversityDetail.swift */,
+				D424D2A827350D1300F9E27B /* DataState.swift */,
 			);
 			path = "Domain Model";
+			sourceTree = "<group>";
+		};
+		D4DA10D6272BF7BF00026B7C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D4DA10D7272BF7CD00026B7C /* models.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,10 +524,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4DA10D8272BF7CD00026B7C /* models.swift in Sources */,
 				D427414E271B56B500AAE3CE /* UniversityDetail.swift in Sources */,
+				D40FECC6271C38AC005BE36B /* APIUrlManager.swift in Sources */,
+				D40FECBC271C3353005BE36B /* APIService.swift in Sources */,
 				D4762B1C2709B54300B2CB58 /* Observable.swift in Sources */,
 				D4762B182709B3B700B2CB58 /* UniversityListViewModel.swift in Sources */,
 				D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */,
+				D424D2A927350D1300F9E27B /* DataState.swift in Sources */,
 				D4CF783126FD1427002FA4C9 /* TableViewCell.swift in Sources */,
 				D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */,
 				D44045C226F68ED00098BEAF /* ViewController.swift in Sources */,
@@ -471,6 +544,9 @@
 				D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */,
 				D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */,
 				D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */,
+				D40FECBF271C341D005BE36B /* UniversityNetworkSource.swift in Sources */,
+				D40FECC4271C353F005BE36B /* UniversityListDTO.swift in Sources */,
+				D4DA10D4272BEF0C00026B7C /* NetworkSource.swift in Sources */,
 				D4274151271B66FC00AAE3CE /* PromotionCollectionViewCell.swift in Sources */,
 				D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */,
 			);

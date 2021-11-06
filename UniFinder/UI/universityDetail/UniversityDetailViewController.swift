@@ -95,7 +95,7 @@ extension UniversityDetailViewController : UICollectionViewDataSource {
 extension UniversityDetailViewController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.size.width
-           // in case you you want the cell to be 40% of your controllers view
+           // in case you you want the cell to be 60% of your controllers view
         return CGSize(width: width * 0.6, height: 72)
     }
 }

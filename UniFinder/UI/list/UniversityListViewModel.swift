@@ -26,10 +26,9 @@ class UniversityListViewModel : ViewModel {
     private func fetchData(on page: Int,onSuccess: @escaping  () -> Void = {} ) {
         
         universityRepository.fetchUniversityList(on: page) { universityItemList in
-//            onSuccess()
+            onSuccess()
             self.universityList.value = DataState.Success(DataContent.createFrom(data:  universityItemList))
         } onError: { error  in
-            print("error : \(error)")
             self.universityList.value = DataState.Error(error)
         } onLoading: {
             self.universityList.value = DataState.Loading
@@ -44,6 +43,7 @@ class UniversityListViewModel : ViewModel {
     func fetchNextPage() {
         fetchData(on: currentPage + 1) {
             self.currentPage += 1
+            print("currentpage \(self.currentPage)")
         }
     }
     

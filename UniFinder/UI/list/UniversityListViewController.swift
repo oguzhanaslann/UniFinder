@@ -61,7 +61,8 @@ class UniversityListViewController: UIViewController {
                     print("loaded success ")
                     self.universityListTableView.isHidden  = false
                     self.progressIndicator.stopAnimating()
-                    self.source = unilist.data
+           
+                    self.source.append(contentsOf: unilist.data)
                     self.universityListTableView.reloadData()
                    break
             case .Empty:
@@ -137,7 +138,12 @@ extension UniversityListViewController : UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         if position > (universityListTableView.contentSize.height - 100 - scrollView.frame.size.height) {
-            viewModel.fetchNextPage()
+            if case .Loading =  viewModel.universityList.value {
+              
+            } else {
+                viewModel.fetchNextPage()
+            }
+            
         }
     }
 }

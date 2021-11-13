@@ -8,21 +8,31 @@
 import Foundation
 
 class UniversityDetailViewModel : ViewModel {
-    let universityDetail = Observable<UniversityDetail?>(nil)
+    let universityDetail = Observable<DataState<UniversityDetail>>(DataState.getDefaultCase())
     
-    public func getUniversityDetailFor(id : String) {
-        universityDetail.value = UniversityDetail(
+    let universityRepository : UniversityRepository
+    
+    
+    init(universityNetworkSource : UniversityNetworkSource) {
+        universityRepository   = UniversityRepository(apiService: universityNetworkSource)
+    }
+    
+    public func getUniversityDetailFor(id : Int) {
+        universityRepository.fetchUniversityDetail(
             id: id,
-            name: "String",
-            cityName: "String",
-            coverPhotoUrl: "https://via.placeholder.com/180x120",
-            promotionImageUrls: [
-                "https://via.placeholder.com/180x120",
-                "https://via.placeholder.com/180x120",
-                "https://via.placeholder.com/180x120",
-                "https://via.placeholder.com/180x120",
-                "https://via.placeholder.com/180x120",
-                "https://via.placeholder.com/180x120"
-            ])
+            onSuccess: {detail in
+                print("detail \(detail)")
+                self.universityDetail.value = DataState.Success(DataContent.createFrom(data:  detail))
+            },
+            onError: {error in
+                self.universityDetail.value = DataState.Error(error)
+            },
+            onLoading: {
+                self.universityDetail.value = DataState.Loading
+            }
+        )
+        
+    
+        
     }
 }

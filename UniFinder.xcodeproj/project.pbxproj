@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D403C10227368D3400DFC5E6 /* UniversityRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403C10127368D3400DFC5E6 /* UniversityRepository.swift */; };
+		D403C10527368DBE00DFC5E6 /* Reposityory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403C10427368DBE00DFC5E6 /* Reposityory.swift */; };
+		D403C10827369F1100DFC5E6 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = D403C10727369F1100DFC5E6 /* Swinject */; };
+		D403C10A2736A2C300DFC5E6 /* Injector.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403C1092736A2C300DFC5E6 /* Injector.swift */; };
 		D40FECB7271C2971005BE36B /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D40FECB6271C2971005BE36B /* SwiftyJSON */; };
 		D40FECBA271C2A7D005BE36B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D40FECB9271C2A7D005BE36B /* Alamofire */; };
 		D40FECBC271C3353005BE36B /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D40FECBB271C3353005BE36B /* APIService.swift */; };
@@ -83,6 +87,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D403C10127368D3400DFC5E6 /* UniversityRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityRepository.swift; sourceTree = "<group>"; };
+		D403C10427368DBE00DFC5E6 /* Reposityory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reposityory.swift; sourceTree = "<group>"; };
+		D403C1092736A2C300DFC5E6 /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
 		D40FECBB271C3353005BE36B /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		D40FECBE271C341D005BE36B /* UniversityNetworkSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityNetworkSource.swift; sourceTree = "<group>"; };
 		D40FECC3271C353F005BE36B /* UniversityListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListDTO.swift; sourceTree = "<group>"; };
@@ -138,6 +145,7 @@
 				D40FECBA271C2A7D005BE36B /* Alamofire in Frameworks */,
 				D40FECB7271C2971005BE36B /* SwiftyJSON in Frameworks */,
 				D4762B1427099EAB00B2CB58 /* Kingfisher in Frameworks */,
+				D403C10827369F1100DFC5E6 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +169,8 @@
 		D403C0FF27367A2300DFC5E6 /* repositories */ = {
 			isa = PBXGroup;
 			children = (
+				D403C10127368D3400DFC5E6 /* UniversityRepository.swift */,
+				D403C10427368DBE00DFC5E6 /* Reposityory.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -337,6 +347,7 @@
 				D4762B192709B45800B2CB58 /* ViewModel.swift */,
 				D4762B1B2709B54300B2CB58 /* Observable.swift */,
 				D4274149271B50F100AAE3CE /* UIViews.swift */,
+				D403C1092736A2C300DFC5E6 /* Injector.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -381,6 +392,7 @@
 				D4762B1327099EAB00B2CB58 /* Kingfisher */,
 				D40FECB6271C2971005BE36B /* SwiftyJSON */,
 				D40FECB9271C2A7D005BE36B /* Alamofire */,
+				D403C10727369F1100DFC5E6 /* Swinject */,
 			);
 			productName = UniFinder;
 			productReference = D44045BA26F68ED00098BEAF /* UniFinder.app */;
@@ -457,6 +469,7 @@
 				D4762B1227099EAB00B2CB58 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				D40FECB5271C2971005BE36B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				D40FECB8271C2A7D005BE36B /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D403C10627369F1100DFC5E6 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = D44045BB26F68ED00098BEAF /* Products */;
 			projectDirPath = "";
@@ -541,8 +554,11 @@
 				D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */,
 				D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */,
 				D427414C271B566C00AAE3CE /* UniversityDetailViewModel.swift in Sources */,
+				D403C10227368D3400DFC5E6 /* UniversityRepository.swift in Sources */,
 				D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */,
+				D403C10A2736A2C300DFC5E6 /* Injector.swift in Sources */,
 				D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */,
+				D403C10527368DBE00DFC5E6 /* Reposityory.swift in Sources */,
 				D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */,
 				D40FECBF271C341D005BE36B /* UniversityNetworkSource.swift in Sources */,
 				D40FECC4271C353F005BE36B /* UniversityListDTO.swift in Sources */,
@@ -877,6 +893,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D403C10627369F1100DFC5E6 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.1;
+			};
+		};
 		D40FECB5271C2971005BE36B /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -904,6 +928,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D403C10727369F1100DFC5E6 /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D403C10627369F1100DFC5E6 /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
 		D40FECB6271C2971005BE36B /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D40FECB5271C2971005BE36B /* XCRemoteSwiftPackageReference "SwiftyJSON" */;

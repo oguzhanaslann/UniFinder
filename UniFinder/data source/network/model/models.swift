@@ -17,8 +17,8 @@ import Alamofire
 
 // MARK: - APIResponse
 struct APIResponse<T:Codable>: Codable {
-    let count: Int
-    let next: String
+    let count: Int?
+    let next: String?
     let previous: String?
     let results: T?
 }

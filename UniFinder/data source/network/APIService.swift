@@ -11,6 +11,7 @@ import SwiftyJSON
 
 
 class APIService : UniversityNetworkSource{
+
     
     static let shared = APIService()
     
@@ -19,8 +20,10 @@ class APIService : UniversityNetworkSource{
         onComplation :  @escaping (NetworkResult<APIResponse<[UniversityDTO]>>) -> Void) ->NetworkResult<APIResponse<[UniversityDTO]>> {
     
         let result : NetworkResult<APIResponse<[UniversityDTO]>> =
-            fetchResult(url: APIURLManager.createUrlFor(
-                action : APIUrlAction.UniversityList(page: page)),
+            fetchResult(
+                url: APIURLManager.createUrlFor(
+                    action : APIUrlAction.UniversityList(page: page)
+                ),
                 onLoading : onLoading,
                 onComplation : onComplation
        )
@@ -30,17 +33,34 @@ class APIService : UniversityNetworkSource{
      
     }
 
-    func fetchUniversityDetail(with id: Int,onLoading : () -> Void , onComplation :  (NetworkResult<APIResponse<UniversityDetailDTO>>) -> Void) -> NetworkResult<APIResponse<UniversityDetailDTO>> {
-         return NetworkResult.Error("")
+
+    
+    
+    func fetchUniversityDetail(
+        with id: Int,
+        onLoading: @escaping () -> Void,
+        onComplation: @escaping (NetworkResult<UniversityDTO>
+    ) -> Void) -> NetworkResult<UniversityDTO> {
+
+        print(" url : \((APIURLManager.createUrlFor(action : APIUrlAction.UniversityDetail(pk: id))))")
+        
+        let result : NetworkResult<UniversityDTO> = fetchResult(
+            url: APIURLManager.createUrlFor(action : APIUrlAction.UniversityDetail(pk: id)),
+            onLoading: onLoading,
+            onComplation: onComplation
+        )
+    
+      
+        return result
     }
     
-    func fetchResult<T: Decodable>(url : String, onLoading :@escaping () -> Void , onComplation : @escaping  (NetworkResult<T>) -> Void ) -> NetworkResult<T> {
-        
+    func fetchResult<T: Codable>(url : String, onLoading :@escaping () -> Void , onComplation : @escaping  (NetworkResult<T>) -> Void ) -> NetworkResult<T> {
         
         var result : NetworkResult<T> = NetworkResult.getDefaultCase()
        
-        
+    
         onLoading()
+        
         
         AF.request(
             url,
@@ -48,11 +68,8 @@ class APIService : UniversityNetworkSource{
         )
         .validate()
         .response { response in
-            print("response : \(response)")
             switch response.result {
-              
             case .success(let value):
-                print("value : \(value)")
                 do {
                     let decodedResult = try JSONDecoder().decode(T.self, from: value!)
                     result = NetworkResult.Success(Content.createFrom(data: decodedResult))
@@ -72,6 +89,9 @@ class APIService : UniversityNetworkSource{
         return result
         
     }
+    
+    
+    
     
 }
 

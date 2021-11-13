@@ -9,7 +9,7 @@ import Foundation
 
 
 struct UniversityListItem {
-    let id : String
+    let id : Int
     let imageUrl : String
     let name : String
     let city : String 
@@ -18,7 +18,7 @@ struct UniversityListItem {
 extension UniversityListItem {
     static func createFrom(universityDTO : UniversityDTO)  -> UniversityListItem{
             return  UniversityListItem(
-                id: String(universityDTO.pk ?? 0 ),
+                id: universityDTO.pk ?? 0,
                 imageUrl: universityDTO.thumbnail ?? "",
                 name: universityDTO.name ?? ""     ,
                 city: universityDTO.country?.name ?? ""

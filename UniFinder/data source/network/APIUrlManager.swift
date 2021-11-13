@@ -13,8 +13,8 @@ class APIURLManager {
    
     public static func createUrlFor(action : APIUrlAction) -> String {
         switch action {
-        case .UniversityDetail :
-            return "\(APIURLManager.BASE_URL)/university"
+        case .UniversityDetail(let pk):
+            return "\(APIURLManager.BASE_URL)/university/\(pk)"
         case .UniversityList(let page, let pageSize):
             print("\(APIURLManager.BASE_URL)/university/?page=\(page)&page_size=\(pageSize)")
             return "\(APIURLManager.BASE_URL)/university/?page=\(page)&page_size=\(pageSize)"
@@ -29,5 +29,5 @@ class APIURLManager {
 
 enum APIUrlAction{
     case UniversityList(page: Int, pageSize:Int = 10 )
-    case UniversityDetail
+    case UniversityDetail(pk:Int)
 }

@@ -10,16 +10,26 @@ import Kingfisher
 
 class UniversityDetailViewController: UIViewController {
     
-    static let emptyUniId : String = ""
+    static let emptyUniId : Int  =  -1 
     
-    var universityId : String = emptyUniId
+    var universityId : Int  = emptyUniId
     
     @IBOutlet weak var universityImage: UIImageView!
     @IBOutlet weak var universityName: UILabel!
     @IBOutlet weak var universityCityName: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private let viewModel = UniversityDetailViewModel()
+    private let viewModel : UniversityDetailViewModel = {
+        print(Injector.shared.injectUniversityDetailViewModel().self)
+        return Injector.shared.injectUniversityDetailViewModel()
+    }()
+    
+    private let progressIndicator : UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.stopAnimating()
+        return indicator
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,24 +44,50 @@ class UniversityDetailViewController: UIViewController {
         
         setUpObservers()
         
-        if universityId != UniversityDetailViewController.emptyUniId {
-            viewModel.getUniversityDetailFor(id: universityId)
-        }
+
         
     }
     
     func  setUpObservers() {
-        viewModel.universityDetail.observe(on: self) { detail in
-            
-            guard detail != nil else {
-                return
+        viewModel.universityDetail.observe(on: self) { detailState in
+            print("\(detailState) state ")
+            switch detailState {
+                case .Error(let error):
+                    print("error \(error)")
+                    break
+                case .Loading:
+                    print("load ")
+                    self.universityName.isHidden  = true
+                    self.universityCityName.isHidden  = true
+                    self.universityImage.isHidden  = true
+                    self.progressIndicator.isHidden = true
+                    self.collectionView.isHidden  = true
+                    self.progressIndicator.startAnimating()
+                    break
+                case .Success(let detail ):
+                    print("loaded success ")
+                    self.universityName.isHidden  = false
+                    self.universityCityName.isHidden  = false
+                    self.universityImage.isHidden  = false
+                    self.collectionView.isHidden  = false
+                    self.progressIndicator.stopAnimating()
+                    
+                    self.universityImage?.kf.setImage(with: URL(string: detail.data.coverPhotoUrl))
+                    self.universityName.text = detail.data.name
+                    self.universityCityName.text = detail.data.cityName
+                    self.universityImage.layer.addSublayer(createGradientLayer(with: self.universityImage.bounds))
+                    self.collectionView.reloadData()
+                   break
+            case .Empty:
+                if self.universityId != UniversityDetailViewController.emptyUniId {
+                    self.viewModel.getUniversityDetailFor(id: self.universityId)
+                }
+                break
             }
             
-            self.universityImage?.kf.setImage(with: URL(string: detail!.coverPhotoUrl))
-            self.universityName.text = detail?.name
-            self.universityCityName.text = detail?.cityName
-            self.universityImage.layer.addSublayer(createGradientLayer(with: self.universityImage.bounds))
-            self.collectionView.reloadData()
+       
+            
+            
         }
     }
     
@@ -67,7 +103,13 @@ extension UniversityDetailViewController : UICollectionViewDelegate {
 
 extension UniversityDetailViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.universityDetail.value?.promotionImageUrls.count ?? 0
+        switch viewModel.universityDetail.value {
+        case .Success(let value):
+            return value.data.promotionImageUrls.count
+        default:
+            return 0
+        }
+       
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -77,13 +119,17 @@ extension UniversityDetailViewController : UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        if viewModel.universityDetail.value != nil
-            && indexPath.row < viewModel.universityDetail.value!.promotionImageUrls.count
-            && viewModel.universityDetail.value!.promotionImageUrls.count > 0 {
-            
-            cell?.initWith(promotionImageUrl:viewModel.universityDetail.value!.promotionImageUrls[indexPath.row] )
         
+        switch viewModel.universityDetail.value {
+            case .Success(let value):
+                if value.data.promotionImageUrls.count > 0 {
+                    cell?.initWith(promotionImageUrl:value.data.promotionImageUrls[indexPath.row] )
+                }
+              
+            default:
+               break
         }
+        
         
         return cell!
     }

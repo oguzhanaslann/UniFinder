@@ -7,18 +7,29 @@
 
 import UIKit
 import Kingfisher
+import Swinject
 
 class UniversityListViewController: UIViewController {
     private var source : [UniversityListItem] = []
     
     @IBOutlet weak var universityListTableView: UITableView!
     
-    private let viewModel = UniversityListViewModel()
+    
+    private let progressIndicator : UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.stopAnimating()
+        return indicator
+    }()
+    
+    let viewModel : UniversityListViewModel = {
+        return Injector.shared.injectUniversityListViewModel()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        viewModel.fetchInitialPage()
+       
         setUpObservers()
     
         let unib = UINib(nibName: TableViewCell.indentifier, bundle: nil)
@@ -28,26 +39,39 @@ class UniversityListViewController: UIViewController {
         universityListTableView.rowHeight = UITableView.automaticDimension
         universityListTableView.separatorStyle = .none
         
-   
+        self.view.addSubview(self.progressIndicator)
+        self.progressIndicator.center = self.view.center
+        
+        
     }
     
     func setUpObservers() {
         viewModel.universityList.observe(on: self) { universityList in
-//            switch universityList {
-//                case .Error(_):
-//                    print("err")
-//                case .Loading:
-//                    print("")
-//                case .Success(let unilist ):
-//                    break
-//
-//
-//            }
-            print("took")
-            self.source = universityList
             
-            self.universityListTableView.reloadData()
+            switch universityList {
+                case .Error(let error):
+                    break
+                case .Loading:
+                    print("load ")
+                    self.universityListTableView.isHidden = true
+                    self.progressIndicator.isHidden = false
+                    self.progressIndicator.startAnimating()
+                    break
+                case .Success(let unilist ):
+                    print("loaded success ")
+                    self.universityListTableView.isHidden  = false
+                    self.progressIndicator.stopAnimating()
+                    self.source = unilist.data
+                    self.universityListTableView.reloadData()
+                   break
+            case .Empty:
+                self.viewModel.fetchInitialPage()
+            }
+            
+        
         }
+        
+        
     }
     
 }

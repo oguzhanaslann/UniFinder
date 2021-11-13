@@ -13,15 +13,15 @@ enum DataState<T> {
     case Loading
     case Success(DataContent<T>)
     case Error(String)
+    case Empty
     
     static func getDefaultCase() -> DataState {
-        return DataState.Error("STUB!!")
+        return DataState.Empty
     }
-}
-
-extension NetworkResult {
     
 }
+
+
 
 
 struct DataContent<Data> {

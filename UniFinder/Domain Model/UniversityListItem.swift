@@ -21,7 +21,16 @@ extension UniversityListItem {
                 id: universityDTO.pk ?? 0,
                 imageUrl: universityDTO.thumbnail ?? "",
                 name: universityDTO.name ?? ""     ,
-                city: universityDTO.country?.name ?? ""
+                city: universityDTO.province?.name ?? ""
             )
+    }
+    
+    static func createFrom( universityShortDTO: UniversityShortDTO) -> UniversityListItem {
+        return UniversityListItem(
+            id: universityShortDTO.pk ?? 0,
+            imageUrl: universityShortDTO.thumbnail ?? "",
+            name: universityShortDTO.name ?? ""     ,
+            city: universityShortDTO.province ?? ""
+        )
     }
 }

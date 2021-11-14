@@ -16,10 +16,32 @@
                     <view key="view" contentMode="scaleToFill" id="AAU-3O-geS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search..." textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gEi-8D-abJ">
+                                <rect key="frame" x="16" y="60" width="382" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Z2C-Iu-oLB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onSearchChanged:" destination="6Xr-bV-bvH" eventType="editingChanged" id="6Ek-VI-Xru"/>
+                                    <action selector="onSearchEnd:" destination="6Xr-bV-bvH" eventType="editingDidEnd" id="tXp-if-0Fk"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="fg5-Io-tkl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gEi-8D-abJ" firstAttribute="leading" secondItem="fg5-Io-tkl" secondAttribute="leading" constant="16" id="O5A-C1-YID"/>
+                            <constraint firstItem="fg5-Io-tkl" firstAttribute="trailing" secondItem="gEi-8D-abJ" secondAttribute="trailing" constant="16" id="QG0-et-AJZ"/>
+                            <constraint firstItem="gEi-8D-abJ" firstAttribute="top" secondItem="fg5-Io-tkl" secondAttribute="top" constant="16" id="pmE-R2-n9A"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="bOh-Wb-UKi"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="gEi-8D-abJ" id="EC9-vR-09B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jP8-JL-4aJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

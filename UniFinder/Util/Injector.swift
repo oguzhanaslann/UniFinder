@@ -68,5 +68,17 @@ class Injector {
         return dependencyContainer.resolve(UniversityDetailViewModel.self)!
     }
     
+    
+    func injectSearchViewModel() -> SearchViewModel {
+        
+        registerDependencyIfNotRegistered(
+            dependency: SearchViewModel.self,
+            onRegisterNeeded: { resolver in
+                SearchViewModel(universityNetworkSource: self.injectAPIService())
+            }
+        )
+        
+        return dependencyContainer.resolve(SearchViewModel.self)!
+    }
    
 }

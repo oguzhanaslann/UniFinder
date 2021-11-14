@@ -26,6 +26,7 @@
 		D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */; };
 		D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0F26F7CAB400B1339E /* SearchViewController.swift */; };
 		D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */; };
+		D43E53F82740EAAB00CF9612 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E53F72740EAAB00CF9612 /* SearchViewModel.swift */; };
 		D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045BD26F68ED00098BEAF /* AppDelegate.swift */; };
 		D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045BF26F68ED00098BEAF /* SceneDelegate.swift */; };
 		D44045C226F68ED00098BEAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045C126F68ED00098BEAF /* ViewController.swift */; };
@@ -103,6 +104,7 @@
 		D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
 		D4278D0F26F7CAB400B1339E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D43E53F72740EAAB00CF9612 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D44045BA26F68ED00098BEAF /* UniFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44045BD26F68ED00098BEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D44045BF26F68ED00098BEAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -221,7 +223,6 @@
 				D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */,
 				D44045C126F68ED00098BEAF /* ViewController.swift */,
 				D44045C326F68ED00098BEAF /* Main.storyboard */,
-				D4278D0F26F7CAB400B1339E /* SearchViewController.swift */,
 				D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */,
 			);
 			path = UI;
@@ -329,6 +330,8 @@
 		D4CF782D26FD13F9002FA4C9 /* search */ = {
 			isa = PBXGroup;
 			children = (
+				D4278D0F26F7CAB400B1339E /* SearchViewController.swift */,
+				D43E53F72740EAAB00CF9612 /* SearchViewModel.swift */,
 			);
 			path = search;
 			sourceTree = "<group>";
@@ -555,6 +558,7 @@
 				D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */,
 				D427414C271B566C00AAE3CE /* UniversityDetailViewModel.swift in Sources */,
 				D403C10227368D3400DFC5E6 /* UniversityRepository.swift in Sources */,
+				D43E53F82740EAAB00CF9612 /* SearchViewModel.swift in Sources */,
 				D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */,
 				D403C10A2736A2C300DFC5E6 /* Injector.swift in Sources */,
 				D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */,

@@ -38,16 +38,16 @@ struct UniversityDTO: Codable {
     let thumbnail, logo: String?
     let ulScore: Double?
     let name: String?
-        let province: Province?
-        let country: Country?
-        let url, apiURL, slug: String?
-        let isFavorited: Bool?
-        let averageTuition: String?
-        let averageTuitionCurrency: String?
-        let hasBachelor, hasMaster, hasOnline: Bool?
-        let homePageOrder: Int?
-        let isBright: Bool?
-        let minIelts, minToefl: Int?
+    let province: Province?
+    let country: Country?
+    let url, apiURL, slug: String?
+    let isFavorited: Bool?
+    let averageTuition: String?
+    let averageTuitionCurrency: String?
+    let hasBachelor, hasMaster, hasOnline: Bool?
+    let homePageOrder: Int?
+    let isBright: Bool?
+    let minIelts, minToefl: Int?
 
         enum CodingKeys: String, CodingKey {
             case pk, thumbnail, logo
@@ -67,6 +67,34 @@ struct UniversityDTO: Codable {
             case minToefl = "min_toefl"
         }
 }
+
+
+struct UniversityShortDTO: Codable {
+    let pk: Int?
+    let thumbnail, logo: String?
+    let ulScore: Double?
+    let name: String?
+    let province,content: String?
+    let country: String?
+    let url, slug,location: String?
+    let isFavorited: Bool?
+    let favoritesCount:Int?
+    let favId :Int?
+
+
+
+        enum CodingKeys: String, CodingKey {
+            case pk, thumbnail, logo
+            case ulScore = "ul_score"
+            case name, province, country, url, content,location
+            case slug
+            case isFavorited = "is_favorited"
+            case favoritesCount = "features_count"
+            case favId = "fav_id"
+        }
+}
+
+
 
 //
 // To parse values from Alamofire responses:

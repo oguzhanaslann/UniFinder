@@ -18,7 +18,8 @@ class APIURLManager {
         case .UniversityList(let page, let pageSize):
             print("\(APIURLManager.BASE_URL)/university/?page=\(page)&page_size=\(pageSize)")
             return "\(APIURLManager.BASE_URL)/university/?page=\(page)&page_size=\(pageSize)"
-       
+        case .UniversityListSearch(let page, let name , let pageSize):
+            return "\(APIURLManager.BASE_URL)/university/search/?page=\(page)"
         default:
             return APIURLManager.BASE_URL
         }
@@ -30,4 +31,5 @@ class APIURLManager {
 enum APIUrlAction{
     case UniversityList(page: Int, pageSize:Int = 10 )
     case UniversityDetail(pk:Int)
+    case UniversityListSearch(page:Int,name:String,pageSize: Int = 10 )
 }

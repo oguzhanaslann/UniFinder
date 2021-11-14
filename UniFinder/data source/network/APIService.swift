@@ -11,7 +11,6 @@ import SwiftyJSON
 
 
 class APIService : UniversityNetworkSource{
-
     
     static let shared = APIService()
     
@@ -54,20 +53,59 @@ class APIService : UniversityNetworkSource{
         return result
     }
     
-    func fetchResult<T: Codable>(url : String, onLoading :@escaping () -> Void , onComplation : @escaping  (NetworkResult<T>) -> Void ) -> NetworkResult<T> {
+    
+    
+    func fetchUniversityListWithName(
+        name : String,
+        page : Int,
+        onLoading: @escaping () -> Void,
+        onComplation: @escaping (NetworkResult<APIResponse<[UniversityShortDTO]>>) -> Void) -> NetworkResult<APIResponse<[UniversityShortDTO]>> {
+            
+        
+        let parameters : Parameters = [
+            "q" : name
+        ]
+        
+        let result : NetworkResult<APIResponse<[UniversityShortDTO]>> =
+            fetchResult(
+                url: APIURLManager.createUrlFor(
+                    action : APIUrlAction.UniversityListSearch(page: page, name: name)
+                ),
+                onLoading : onLoading,
+                onComplation : onComplation,
+                method: .post,
+                parameters: parameters
+       )
+    
+      
+        return result
+     
+    }
+    
+    
+    
+    func fetchResult<T: Codable>(
+        url : String,
+        onLoading :@escaping () -> Void ,
+        onComplation : @escaping  (NetworkResult<T>) -> Void,
+        method: HTTPMethod = .get,
+        parameters: Parameters? = nil
+    ) -> NetworkResult<T> {
         
         var result : NetworkResult<T> = NetworkResult.getDefaultCase()
-       
     
         onLoading()
         
-        
         AF.request(
             url,
-            method: .get
+            method: method,
+            parameters: parameters,
+            encoding: Alamofire.JSONEncoding.default
         )
         .validate()
         .response { response in
+            print("Call \(method.rawValue), response code :  \(response.response?.statusCode)")
+          
             switch response.result {
             case .success(let value):
                 do {

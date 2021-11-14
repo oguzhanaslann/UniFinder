@@ -79,4 +79,39 @@ class UniversityRepository : Repository{
 
     }
     
+    
+    func fetchUniversityListWithName(
+        name:String,
+        page:Int,
+        onSuccess: @escaping  ([UniversityListItem]) -> Void = {_ in },
+        onError: @escaping  (String) -> Void = {_ in },
+        onLoading: @escaping  () -> Void = { }
+    ) {
+        apiService.fetchUniversityListWithName(
+            name: name,
+            page: page,
+            onLoading:onLoading,
+            onComplation: { result in
+                switch result {
+                    case .Error(let error):
+                        onError(error)
+                    case .Loading:
+                        onLoading()
+                    case .Success(let unilist ):
+                        
+                        var currentList : [UniversityListItem] = []
+                    
+                        unilist.data.results?.forEach({ universityShortDTO in
+                            currentList.append(
+                                UniversityListItem.createFrom(universityShortDTO: universityShortDTO)
+                            )
+                        })
+                        
+                        onSuccess(currentList)
+                       
+                }
+            }
+       )
+    }
+    
 }

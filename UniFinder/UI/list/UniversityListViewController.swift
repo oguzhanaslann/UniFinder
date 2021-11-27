@@ -14,13 +14,10 @@ class UniversityListViewController: UIViewController {
     
     @IBOutlet weak var universityListTableView: UITableView!
     
-    
-    private let progressIndicator : UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView()
-        indicator.hidesWhenStopped = true
-        indicator.stopAnimating()
-        return indicator
+    private lazy var progressIndicator :UIActivityIndicatorView = {
+        createProgressIndicator()
     }()
+    
     
     let viewModel : UniversityListViewModel = {
         return Injector.shared.injectUniversityListViewModel()
@@ -53,15 +50,19 @@ class UniversityListViewController: UIViewController {
                     break
                 case .Loading:
                     print("load ")
-                    self.universityListTableView.isHidden = true
-                    self.progressIndicator.isHidden = false
+                   
+                    if self.viewModel.getCurrentPageNumber() == 1 {
+                        self.universityListTableView.hide()
+                    }
+                    
+                    self.progressIndicator.show()
                     self.progressIndicator.startAnimating()
                     break
                 case .Success(let unilist ):
                     print("loaded success ")
-                    self.universityListTableView.isHidden  = false
+                    self.universityListTableView.show()
                     self.progressIndicator.stopAnimating()
-           
+                    self.progressIndicator.hide()
                     self.source.append(contentsOf: unilist.data)
                     self.universityListTableView.reloadData()
                    break

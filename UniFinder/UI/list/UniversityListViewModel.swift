@@ -13,7 +13,7 @@ class UniversityListViewModel : ViewModel {
    
     let universityRepository : UniversityRepository
     
-    var currentPage = 1
+    private var currentPage = 1
     
     
     init(universityNetworkSource : UniversityNetworkSource) {
@@ -47,7 +47,9 @@ class UniversityListViewModel : ViewModel {
         }
     }
     
-    
+    func getCurrentPageNumber() -> Int  {
+        return currentPage
+    }
     
     
 }

@@ -26,20 +26,28 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="onSearchChanged:" destination="6Xr-bV-bvH" eventType="editingChanged" id="6Ek-VI-Xru"/>
-                                    <action selector="onSearchEnd:" destination="6Xr-bV-bvH" eventType="editingDidEnd" id="tXp-if-0Fk"/>
                                 </connections>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h9N-zn-xPj">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fg5-Io-tkl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gEi-8D-abJ" firstAttribute="leading" secondItem="fg5-Io-tkl" secondAttribute="leading" constant="16" id="O5A-C1-YID"/>
                             <constraint firstItem="fg5-Io-tkl" firstAttribute="trailing" secondItem="gEi-8D-abJ" secondAttribute="trailing" constant="16" id="QG0-et-AJZ"/>
+                            <constraint firstItem="fg5-Io-tkl" firstAttribute="bottom" secondItem="h9N-zn-xPj" secondAttribute="bottom" id="SIa-ny-EqP"/>
+                            <constraint firstItem="h9N-zn-xPj" firstAttribute="leading" secondItem="fg5-Io-tkl" secondAttribute="leading" id="byf-qf-Bdk"/>
                             <constraint firstItem="gEi-8D-abJ" firstAttribute="top" secondItem="fg5-Io-tkl" secondAttribute="top" constant="16" id="pmE-R2-n9A"/>
+                            <constraint firstItem="h9N-zn-xPj" firstAttribute="top" secondItem="gEi-8D-abJ" secondAttribute="bottom" constant="16" id="sAw-MR-cOp"/>
+                            <constraint firstItem="fg5-Io-tkl" firstAttribute="trailing" secondItem="h9N-zn-xPj" secondAttribute="trailing" id="xG1-Vj-VhZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="bOh-Wb-UKi"/>
                     <connections>
+                        <outlet property="searchTableView" destination="h9N-zn-xPj" id="HTe-xk-mTs"/>
                         <outlet property="searchTextField" destination="gEi-8D-abJ" id="EC9-vR-09B"/>
                     </connections>
                 </viewController>

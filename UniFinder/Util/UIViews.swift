@@ -15,3 +15,16 @@ func createGradientLayer(with frame : CGRect) -> CALayer{
     gradient.colors = [UIColor.black.withAlphaComponent(0.5).cgColor,UIColor.white.withAlphaComponent(0.1).cgColor, UIColor.black.withAlphaComponent(0.8).cgColor]
     return gradient
 }
+
+func createProgressIndicator() -> UIActivityIndicatorView{
+    let progressIndicator : UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView()
+        indicator.hidesWhenStopped = true
+        indicator.stopAnimating()
+        return indicator
+    }()
+    
+    return progressIndicator
+}
+
+

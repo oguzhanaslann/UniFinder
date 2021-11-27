@@ -68,6 +68,7 @@
 		D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */; };
 		D4DA10D4272BEF0C00026B7C /* NetworkSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DA10D3272BEF0C00026B7C /* NetworkSource.swift */; };
 		D4DA10D8272BF7CD00026B7C /* models.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DA10D7272BF7CD00026B7C /* models.swift */; };
+		D4FCFC2827528CCA00128C1F /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCFC2727528CCA00128C1F /* Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +138,7 @@
 		D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListItem.swift; sourceTree = "<group>"; };
 		D4DA10D3272BEF0C00026B7C /* NetworkSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSource.swift; sourceTree = "<group>"; };
 		D4DA10D7272BF7CD00026B7C /* models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = models.swift; sourceTree = "<group>"; };
+		D4FCFC2727528CCA00128C1F /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +353,7 @@
 				D4762B1B2709B54300B2CB58 /* Observable.swift */,
 				D4274149271B50F100AAE3CE /* UIViews.swift */,
 				D403C1092736A2C300DFC5E6 /* Injector.swift */,
+				D4FCFC2727528CCA00128C1F /* Extentions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 			files = (
 				D4DA10D8272BF7CD00026B7C /* models.swift in Sources */,
 				D427414E271B56B500AAE3CE /* UniversityDetail.swift in Sources */,
+				D4FCFC2827528CCA00128C1F /* Extentions.swift in Sources */,
 				D40FECC6271C38AC005BE36B /* APIUrlManager.swift in Sources */,
 				D40FECBC271C3353005BE36B /* APIService.swift in Sources */,
 				D4762B1C2709B54300B2CB58 /* Observable.swift in Sources */,

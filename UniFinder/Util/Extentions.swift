@@ -19,3 +19,9 @@ extension UIView {
     }
     
 }
+
+extension UIAlertController {
+    func showOn(_ controller: UIViewController, isAnimated : Bool , completion: (() -> Void)? = nil) {
+        controller.present(self, animated: isAnimated, completion: completion)
+    }
+}

@@ -27,4 +27,22 @@ func createProgressIndicator() -> UIActivityIndicatorView{
     return progressIndicator
 }
 
+/*
+ self.present(alert, animated: true, completion: nil)
+ */
+
+func createAlertDialog(
+    title:String,
+    message:String,
+    style:UIAlertController.Style,
+    actions:UIAlertAction...) -> UIAlertController{
+    
+    let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+    
+    actions.forEach { action in
+        alert.addAction(action)
+    }
+
+    return alert
+}
 

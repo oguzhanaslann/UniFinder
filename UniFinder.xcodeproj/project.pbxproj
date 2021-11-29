@@ -225,7 +225,6 @@
 				D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */,
 				D44045C126F68ED00098BEAF /* ViewController.swift */,
 				D44045C326F68ED00098BEAF /* Main.storyboard */,
-				D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -341,6 +340,7 @@
 		D4CF782E26FD1400002FA4C9 /* profile */ = {
 			isa = PBXGroup;
 			children = (
+				D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";

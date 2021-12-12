@@ -81,4 +81,15 @@ class Injector {
         return dependencyContainer.resolve(SearchViewModel.self)!
     }
    
+    func injectProfileViewModel() -> ProfileViewModel {
+        registerDependencyIfNotRegistered(
+            dependency: ProfileViewModel.self,
+            onRegisterNeeded:  { resolver in
+                ProfileViewModel(repository: ProfileRepository(preferences: UniFinderPreferences()))
+            }
+        )
+        
+        return dependencyContainer.resolve(ProfileViewModel.self)!
+    }
+    
 }

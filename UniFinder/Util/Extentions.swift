@@ -25,3 +25,9 @@ extension UIAlertController {
         controller.present(self, animated: isAnimated, completion: completion)
     }
 }
+
+extension Bool {
+    func not()  -> Bool {
+        return !self
+    }
+}

@@ -20,7 +20,6 @@ class UniversityDetailViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     private let viewModel : UniversityDetailViewModel = {
-        print(Injector.shared.injectUniversityDetailViewModel().self)
         return Injector.shared.injectUniversityDetailViewModel()
     }()
     

@@ -26,6 +26,10 @@
 		D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */; };
 		D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D0F26F7CAB400B1339E /* SearchViewController.swift */; };
 		D4278D1226F7CAFE00B1339E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */; };
+		D432BC202765381F0040D698 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BC1F2765381F0040D698 /* ProfileViewModel.swift */; };
+		D432BC22276538730040D698 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BC21276538730040D698 /* UserProfile.swift */; };
+		D432BC2627654C860040D698 /* UnifinderPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BC2527654C860040D698 /* UnifinderPreferences.swift */; };
+		D432BC28276550D80040D698 /* ProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D432BC27276550D80040D698 /* ProfileRepository.swift */; };
 		D43E53F82740EAAB00CF9612 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43E53F72740EAAB00CF9612 /* SearchViewModel.swift */; };
 		D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045BD26F68ED00098BEAF /* AppDelegate.swift */; };
 		D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045BF26F68ED00098BEAF /* SceneDelegate.swift */; };
@@ -105,6 +109,10 @@
 		D4278D0D26F7CA5B00B1339E /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
 		D4278D0F26F7CAB400B1339E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		D432BC1F2765381F0040D698 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D432BC21276538730040D698 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		D432BC2527654C860040D698 /* UnifinderPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnifinderPreferences.swift; sourceTree = "<group>"; };
+		D432BC27276550D80040D698 /* ProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRepository.swift; sourceTree = "<group>"; };
 		D43E53F72740EAAB00CF9612 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		D44045BA26F68ED00098BEAF /* UniFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44045BD26F68ED00098BEAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 			children = (
 				D403C10127368D3400DFC5E6 /* UniversityRepository.swift */,
 				D403C10427368DBE00DFC5E6 /* Reposityory.swift */,
+				D432BC27276550D80040D698 /* ProfileRepository.swift */,
 			);
 			path = repositories;
 			sourceTree = "<group>";
@@ -210,6 +219,7 @@
 		D424D2A727350D0000F9E27B /* local */ = {
 			isa = PBXGroup;
 			children = (
+				D432BC2527654C860040D698 /* UnifinderPreferences.swift */,
 			);
 			path = local;
 			sourceTree = "<group>";
@@ -341,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				D4278D1126F7CAFE00B1339E /* ProfileViewController.swift */,
+				D432BC1F2765381F0040D698 /* ProfileViewModel.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -366,6 +377,7 @@
 				D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */,
 				D427414D271B56B500AAE3CE /* UniversityDetail.swift */,
 				D424D2A827350D1300F9E27B /* DataState.swift */,
+				D432BC21276538730040D698 /* UserProfile.swift */,
 			);
 			path = "Domain Model";
 			sourceTree = "<group>";
@@ -555,6 +567,7 @@
 				D4CF783126FD1427002FA4C9 /* TableViewCell.swift in Sources */,
 				D4CF783A26FD1D06002FA4C9 /* UniversityListItem.swift in Sources */,
 				D44045C226F68ED00098BEAF /* ViewController.swift in Sources */,
+				D432BC202765381F0040D698 /* ProfileViewModel.swift in Sources */,
 				D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */,
 				D46BE9AD2710226100633C69 /* UniversityDetailViewController.swift in Sources */,
 				D427414A271B50F100AAE3CE /* UIViews.swift in Sources */,
@@ -563,6 +576,7 @@
 				D427414C271B566C00AAE3CE /* UniversityDetailViewModel.swift in Sources */,
 				D403C10227368D3400DFC5E6 /* UniversityRepository.swift in Sources */,
 				D43E53F82740EAAB00CF9612 /* SearchViewModel.swift in Sources */,
+				D432BC2627654C860040D698 /* UnifinderPreferences.swift in Sources */,
 				D47429CD26F72B9E00B51184 /* LaunchScreenViewController.swift in Sources */,
 				D403C10A2736A2C300DFC5E6 /* Injector.swift in Sources */,
 				D4CF783626FD192D002FA4C9 /* Constants.swift in Sources */,
@@ -570,6 +584,8 @@
 				D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */,
 				D40FECBF271C341D005BE36B /* UniversityNetworkSource.swift in Sources */,
 				D40FECC4271C353F005BE36B /* UniversityListDTO.swift in Sources */,
+				D432BC28276550D80040D698 /* ProfileRepository.swift in Sources */,
+				D432BC22276538730040D698 /* UserProfile.swift in Sources */,
 				D4DA10D4272BEF0C00026B7C /* NetworkSource.swift in Sources */,
 				D4274151271B66FC00AAE3CE /* PromotionCollectionViewCell.swift in Sources */,
 				D44045C026F68ED00098BEAF /* SceneDelegate.swift in Sources */,

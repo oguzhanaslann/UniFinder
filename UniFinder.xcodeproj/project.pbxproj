@@ -39,7 +39,9 @@
 		D44045CA26F68ED10098BEAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */; };
 		D44045D526F68ED10098BEAF /* UniFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045D426F68ED10098BEAF /* UniFinderTests.swift */; };
 		D44045E026F68ED10098BEAF /* UniFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44045DF26F68ED10098BEAF /* UniFinderUITests.swift */; };
+		D469CC992766A37F00E0007B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469CC982766A37F00E0007B /* LoginViewController.swift */; };
 		D46BE9AD2710226100633C69 /* UniversityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */; };
+		D4724CF6276C7875008C6416 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4724CF5276C7875008C6416 /* ProfileSettings.swift */; };
 		D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
 		D47429B826F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
 		D47429B926F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
@@ -128,7 +130,9 @@
 		D44045DB26F68ED10098BEAF /* UniFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D44045DF26F68ED10098BEAF /* UniFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniFinderUITests.swift; sourceTree = "<group>"; };
 		D44045E126F68ED10098BEAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D469CC982766A37F00E0007B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewController.swift; sourceTree = "<group>"; };
+		D4724CF5276C7875008C6416 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
 		D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Heavy-09.ttf"; sourceTree = "<group>"; };
 		D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-DemiBold-03.ttf"; sourceTree = "<group>"; };
 		D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Regular-08.ttf"; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 				D44045C826F68ED10098BEAF /* LaunchScreen.storyboard */,
 				D44045C126F68ED00098BEAF /* ViewController.swift */,
 				D44045C326F68ED00098BEAF /* Main.storyboard */,
+				D469CC982766A37F00E0007B /* LoginViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -302,6 +307,17 @@
 				D4274150271B66FC00AAE3CE /* PromotionCollectionViewCell.xib */,
 			);
 			path = universityDetail;
+			sourceTree = "<group>";
+		};
+		D4724CF4276C7858008C6416 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */,
+				D427414D271B56B500AAE3CE /* UniversityDetail.swift */,
+				D432BC21276538730040D698 /* UserProfile.swift */,
+				D4724CF5276C7875008C6416 /* ProfileSettings.swift */,
+			);
+			path = models;
 			sourceTree = "<group>";
 		};
 		D47429AF26F7262A00B51184 /* fonts */ = {
@@ -372,12 +388,10 @@
 		D4CF783726FD1CB7002FA4C9 /* Domain Model */ = {
 			isa = PBXGroup;
 			children = (
+				D4724CF4276C7858008C6416 /* models */,
 				D403C10027367A3500DFC5E6 /* usecases */,
 				D403C0FF27367A2300DFC5E6 /* repositories */,
-				D4CF783926FD1D06002FA4C9 /* UniversityListItem.swift */,
-				D427414D271B56B500AAE3CE /* UniversityDetail.swift */,
 				D424D2A827350D1300F9E27B /* DataState.swift */,
-				D432BC21276538730040D698 /* UserProfile.swift */,
 			);
 			path = "Domain Model";
 			sourceTree = "<group>";
@@ -569,6 +583,7 @@
 				D44045C226F68ED00098BEAF /* ViewController.swift in Sources */,
 				D432BC202765381F0040D698 /* ProfileViewModel.swift in Sources */,
 				D44045BE26F68ED00098BEAF /* AppDelegate.swift in Sources */,
+				D4724CF6276C7875008C6416 /* ProfileSettings.swift in Sources */,
 				D46BE9AD2710226100633C69 /* UniversityDetailViewController.swift in Sources */,
 				D427414A271B50F100AAE3CE /* UIViews.swift in Sources */,
 				D4278D0E26F7CA5B00B1339E /* UniversityListViewController.swift in Sources */,
@@ -583,6 +598,7 @@
 				D403C10527368DBE00DFC5E6 /* Reposityory.swift in Sources */,
 				D4762B1A2709B45800B2CB58 /* ViewModel.swift in Sources */,
 				D40FECBF271C341D005BE36B /* UniversityNetworkSource.swift in Sources */,
+				D469CC992766A37F00E0007B /* LoginViewController.swift in Sources */,
 				D40FECC4271C353F005BE36B /* UniversityListDTO.swift in Sources */,
 				D432BC28276550D80040D698 /* ProfileRepository.swift in Sources */,
 				D432BC22276538730040D698 /* UserProfile.swift in Sources */,
@@ -647,6 +663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -708,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

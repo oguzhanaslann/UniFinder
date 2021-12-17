@@ -1,0 +1,35 @@
+
+/* Class = "UIButton"; configuration.title = "Button"; ObjectID = "3r4-Kw-lZB"; */
+"3r4-Kw-lZB.configuration.title" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3r4-Kw-lZB"; */
+"3r4-Kw-lZB.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Hc6-Se-lMx"; */
+"Hc6-Se-lMx.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LcN-Oq-YC5"; */
+"LcN-Oq-YC5.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "TJj-zT-pdC"; */
+"TJj-zT-pdC.title" = "Profil";
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "bOh-Wb-UKi"; */
+"bOh-Wb-UKi.title" = "Ara...";
+
+/* Class = "UITextField"; placeholder = "Search..."; ObjectID = "gEi-8D-abJ"; */
+"gEi-8D-abJ.placeholder" = "Ara...";
+
+/* Class = "UILabel"; text = "My Profile"; ObjectID = "r0k-97-9Ld"; */
+"r0k-97-9Ld.text" = "Profilim";
+
+/* Class = "UITabBarItem"; title = "List"; ObjectID = "vWc-04-Tz3"; */
+"vWc-04-Tz3.title" = "List";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "w5N-My-HU7"; */
+"w5N-My-HU7.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yAm-zY-3JJ"; */
+"yAm-zY-3JJ.text" = "Label";
+
+"logOutErrorMessage" = "Çıkış yapmak istediğinizden emin misiniz ? "

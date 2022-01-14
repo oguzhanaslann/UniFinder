@@ -246,12 +246,14 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person.fill" id="TJj-zT-pdC"/>
                     <connections>
+                        <outlet property="UserFullnameTEXT" destination="Gdi-Qu-dgM" id="kJN-bo-9h1"/>
                         <outlet property="googleLoginButton" destination="Hc6-Se-lMx" id="3kE-aG-KPb"/>
                         <outlet property="profileImageDividerContainer" destination="q1O-Zy-n2T" id="dfo-Eq-1Cu"/>
                         <outlet property="profileImageView" destination="54P-XM-k1f" id="i59-dy-4YE"/>
                         <outlet property="realProfileImageView" destination="aXX-Vj-Evm" id="lbI-Ph-J4z"/>
                         <outlet property="univerlistLoginButton" destination="LcN-Oq-YC5" id="4NV-Tw-Cmm"/>
                         <outlet property="userBioContainer" destination="ECO-Jo-smG" id="Nsj-oa-9TC"/>
+                        <outlet property="userBioText" destination="Ju9-PR-NHf" id="zXu-Od-neR"/>
                         <outlet property="userEmailText" destination="L07-7o-tfn" id="Y3y-rb-tgl"/>
                         <outlet property="userFullNameContainer" destination="z1y-YR-D1a" id="yNl-L8-NVX"/>
                         <outlet property="userfullNameText" destination="L07-7o-tfn" id="eZ6-Cd-hrr"/>

@@ -12,6 +12,7 @@ import Combine
 class ProfileViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
 
+    @IBOutlet weak var UserFullnameTEXT: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var realProfileImageView: UIImageView!
     @IBOutlet weak var univerlistLoginButton: UIButton!
@@ -19,6 +20,7 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
     @IBOutlet weak var profileImageDividerContainer: UIView!
     @IBOutlet weak var userfullNameText: UILabel!
     @IBOutlet weak var userEmailText: UILabel!
+   
     @IBOutlet weak var userBioText: UILabel!
     @IBOutlet weak var userFullNameContainer: UIStackView!
     @IBOutlet weak var userBioContainer: UIStackView!
@@ -65,10 +67,17 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
         realProfileImageView.tintColor = UIColor.gray
         realProfileImageView.layer.backgroundColor = UIColor.systemBlue.withAlphaComponent(1.0).cgColor
         realProfileImageView.layer.cornerRadius = realProfileImageView.frame.height / 2
+        realProfileImageView.frame = CGRect(
+            x: realProfileImageView.frame.minX,
+            y: realProfileImageView.frame.minY,
+            width: 48,
+            height: 48
+        )
+        
         realProfileImageView.clipsToBounds = true
         realProfileImageView.layer.borderWidth = 2.5
         realProfileImageView.layer.borderColor = UIColor.white.cgColor
-
+        
     }
     private func initEmailText() {
         userFullNameContainer.layer.borderColor = UIColor.systemPink.cgColor
@@ -110,7 +119,7 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
                     self.onUserProfileDataReveiver(userProfile.data)
                     break
                 case .Empty:
-                    self.callUserProfileIfNotLoggedIn()
+                    self.callUserProfileIfLoggedIn()
                     break
                 case .Loading:
                     break
@@ -171,18 +180,18 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
     func logoutUser() {
         
         dialog = createAlertDialog(
-            title: "Warning - You are about to log out",
-            message: "are you sure about loggin out ? ",
+            title: Localization.logoutWarning.localize(),
+            message: Localization.logoutWarningDescription.localize(),
             style: UIAlertController.Style.alert,
             actions: UIAlertAction(
-                title: "Logout",
+                title: Localization.logout.localize(),
                 style: UIAlertAction.Style.default,
                 handler: { action in
                     self.viewModel.logoutUser()
                 }
             ),
             UIAlertAction(
-                title: "Cancel", style: UIAlertAction.Style.cancel, handler: { action in
+                title: Localization.cancel.localize(), style: UIAlertAction.Style.cancel, handler: { action in
                     self.dialog?.dismiss(animated: false, completion: nil)
                 }
             )
@@ -193,7 +202,7 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
     }
     
     
-    private func callUserProfileIfNotLoggedIn(){
+    private func callUserProfileIfLoggedIn(){
         let isLoggedIn = self.viewModel.isLoggedIn()
         if isLoggedIn {
             let userId = self.viewModel.getUserId()
@@ -204,16 +213,17 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
     private func onUserProfileDataReveiver(_ userProfile : UserProfile) {
         profileImageView.kf.setImage(with: URL(string: userProfile.backgroundPhoto))
         realProfileImageView.kf.setImage(with: URL(string: userProfile.profilePhoto))
-        userfullNameText.text = userProfile.fullName
+
         userEmailText.text = userProfile.email
         userBioText.text = userProfile.bio
+        UserFullnameTEXT.text = userProfile.fullName
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let shouldShowLoginDialog = viewModel.isLoggedIn().not()
         if shouldShowLoginDialog {
             dialog = createAlertDialog(
-                title: "Authentication needed",
+                title: Localization.authenticationNeededTitle.localize(),
                 message: "Please login to you profile",
                 style: UIAlertController.Style.alert,
                 actions: UIAlertAction(
@@ -244,7 +254,7 @@ class ProfileViewController: UIViewController , UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         
-        cell.textLabel?.text = settings[indexPath.row].rawValue
+        cell.textLabel?.text = settings[indexPath.row].localizedRawValue()
         
         return cell
     }

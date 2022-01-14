@@ -42,6 +42,8 @@
 		D469CC992766A37F00E0007B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D469CC982766A37F00E0007B /* LoginViewController.swift */; };
 		D46BE9AD2710226100633C69 /* UniversityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */; };
 		D4724CF6276C7875008C6416 /* ProfileSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4724CF5276C7875008C6416 /* ProfileSettings.swift */; };
+		D4724CFD276CA8AF008C6416 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4724CFF276CA8AF008C6416 /* Localizable.strings */; };
+		D4724D02276CAAA3008C6416 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4724D01276CAAA3008C6416 /* Localization.swift */; };
 		D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
 		D47429B826F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
 		D47429B926F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */; };
@@ -133,6 +135,10 @@
 		D469CC982766A37F00E0007B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D46BE9AC2710226100633C69 /* UniversityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewController.swift; sourceTree = "<group>"; };
 		D4724CF5276C7875008C6416 /* ProfileSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettings.swift; sourceTree = "<group>"; };
+		D4724CFA276CA86C008C6416 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		D4724CFE276CA8AF008C6416 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4724D00276CA8B0008C6416 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D4724D01276CAAA3008C6416 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		D47429B026F7264000B51184 /* AvenirNext-Heavy-09.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Heavy-09.ttf"; sourceTree = "<group>"; };
 		D47429B126F7264000B51184 /* AvenirNext-DemiBold-03.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-DemiBold-03.ttf"; sourceTree = "<group>"; };
 		D47429B226F7264000B51184 /* AvenirNext-Regular-08.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AvenirNext-Regular-08.ttf"; sourceTree = "<group>"; };
@@ -247,6 +253,7 @@
 		D44045B126F68ED00098BEAF = {
 			isa = PBXGroup;
 			children = (
+				D4724CFF276CA8AF008C6416 /* Localizable.strings */,
 				D44045BC26F68ED00098BEAF /* UniFinder */,
 				D44045D326F68ED10098BEAF /* UniFinderTests */,
 				D44045DE26F68ED10098BEAF /* UniFinderUITests */,
@@ -381,6 +388,7 @@
 				D4274149271B50F100AAE3CE /* UIViews.swift */,
 				D403C1092736A2C300DFC5E6 /* Injector.swift */,
 				D4FCFC2727528CCA00128C1F /* Extentions.swift */,
+				D4724D01276CAAA3008C6416 /* Localization.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -495,6 +503,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = D44045B126F68ED00098BEAF;
 			packageReferences = (
@@ -528,6 +537,7 @@
 				D44045C526F68ED00098BEAF /* Main.storyboard in Resources */,
 				D47429B726F7264000B51184 /* AvenirNext-Heavy-09.ttf in Resources */,
 				D47429C326F7264000B51184 /* AvenirNext-Italic-05.ttf in Resources */,
+				D4724CFD276CA8AF008C6416 /* Localizable.strings in Resources */,
 				D47429BD26F7264000B51184 /* AvenirNext-Regular-08.ttf in Resources */,
 				D4274152271B66FC00AAE3CE /* PromotionCollectionViewCell.xib in Resources */,
 				D47429C026F7264000B51184 /* AvenirNext-Bold-01.ttf in Resources */,
@@ -574,6 +584,7 @@
 				D4FCFC2827528CCA00128C1F /* Extentions.swift in Sources */,
 				D40FECC6271C38AC005BE36B /* APIUrlManager.swift in Sources */,
 				D40FECBC271C3353005BE36B /* APIService.swift in Sources */,
+				D4724D02276CAAA3008C6416 /* Localization.swift in Sources */,
 				D4762B1C2709B54300B2CB58 /* Observable.swift in Sources */,
 				D4762B182709B3B700B2CB58 /* UniversityListViewModel.swift in Sources */,
 				D4278D1026F7CAB400B1339E /* SearchViewController.swift in Sources */,
@@ -644,6 +655,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D44045C426F68ED00098BEAF /* Base */,
+				D4724CFA276CA86C008C6416 /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -654,6 +666,15 @@
 				D44045C926F68ED10098BEAF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D4724CFF276CA8AF008C6416 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4724CFE276CA8AF008C6416 /* tr */,
+				D4724D00276CA8B0008C6416 /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

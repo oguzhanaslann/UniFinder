@@ -12,16 +12,16 @@
 "LcN-Oq-YC5.normalTitle" = "Button";
 
 /* Class = "UITabBarItem"; title = "Profile"; ObjectID = "TJj-zT-pdC"; */
-"TJj-zT-pdC.title" = "Profil";
+"TJj-zT-pdC.title" = "Profile";
 
 /* Class = "UITabBarItem"; title = "Search"; ObjectID = "bOh-Wb-UKi"; */
-"bOh-Wb-UKi.title" = "Ara...";
+"bOh-Wb-UKi.title" = "Search";
 
 /* Class = "UITextField"; placeholder = "Search..."; ObjectID = "gEi-8D-abJ"; */
-"gEi-8D-abJ.placeholder" = "Ara...";
+"gEi-8D-abJ.placeholder" = "Search...";
 
 /* Class = "UILabel"; text = "My Profile"; ObjectID = "r0k-97-9Ld"; */
-"r0k-97-9Ld.text" = "Profilim";
+"r0k-97-9Ld.text" = "My Profile";
 
 /* Class = "UITabBarItem"; title = "List"; ObjectID = "vWc-04-Tz3"; */
 "vWc-04-Tz3.title" = "List";
@@ -31,5 +31,3 @@
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "yAm-zY-3JJ"; */
 "yAm-zY-3JJ.text" = "Label";
-
-"logOutErrorMessage" = "Çıkış yapmak istediğinizden emin misiniz ? "

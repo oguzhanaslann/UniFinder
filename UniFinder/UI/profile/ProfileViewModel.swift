@@ -13,12 +13,6 @@ class ProfileViewModel : ViewModel {
     let userProfile = Observable<DataState<UserProfile>>(DataState.getDefaultCase())
     let userProfileSettings  = Observable<DataState<[ProfileSetting]>>(DataState.getDefaultCase())
     
-/**
- let subject = PassthroughSubject<ProfileSetting, Never>()
- 
- let publisher :  Publishers.Share<PassthroughSubject<ProfileSetting, Never>>
- */
-    
     let subject = PassthroughSubject<ProfileSetting, Never>()
 
     let publisher: AnyPublisher<ProfileSetting, Never>
@@ -39,7 +33,7 @@ class ProfileViewModel : ViewModel {
     }
     
     func isLoggedIn() -> Bool {
-        return repository.isUserLoggedIn() || true 
+        return repository.isUserLoggedIn() && false 
     }
     
     func getUserId() -> Int {
@@ -47,7 +41,11 @@ class ProfileViewModel : ViewModel {
     }
     
     func getUserProfile(_ id : Int) {
-        
+        userProfile.value =  DataState.Success(
+           DataContent.createFrom(
+            data: UserProfile(profilePhoto: "https://via.placeholder.com/48", backgroundPhoto: "https://via.placeholder.com/700x450/0000ff", fullName: "Oğuzhan Aslan", email: "blabla@gmailnot.com", bio: "Lorem Lorem Lorem")
+           )
+        )
     }
     
     

@@ -31,3 +31,9 @@ extension Bool {
         return !self
     }
 }
+
+extension String {
+    func localize(_ key : String? = nil) -> String {
+      return NSLocalizedString( key ?? self , comment: "")
+    }
+}

@@ -13,3 +13,9 @@ enum ProfileSetting : String  {
     case PrivacyAndAgreement = "Privacy And Agreement"
     case Logout = "Logout"
 }
+
+extension ProfileSetting {
+    func localizedRawValue() -> String {
+        return NSLocalizedString(self.rawValue.lowercased().trimmingCharacters(in: .whitespacesAndNewlines), comment: "")
+    }
+}

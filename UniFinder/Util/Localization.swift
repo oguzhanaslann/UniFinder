@@ -13,6 +13,10 @@ enum Localization : String {
     case logout = "logout"
     case cancel = "cancel"
     case authenticationNeededTitle = "authenticationneededtitle"
+    case signin = "signin"
+    case signUp = "signup"
+    case email = "email"
+    case password = "password"
 }
 
 extension Localization {
